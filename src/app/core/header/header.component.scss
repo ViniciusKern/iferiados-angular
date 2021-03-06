@@ -1,0 +1,25 @@
+@import 'src/assets/styles/variables.scss';
+
+.app-header {
+  height: $header-height;
+  background-color: $primary-color;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-header > div {
+  width: 100%;
+  max-width: $app-max-width;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-title {
+  color: $title-color;
+  text-align: left;
+  margin-left: 0.5rem;
+}

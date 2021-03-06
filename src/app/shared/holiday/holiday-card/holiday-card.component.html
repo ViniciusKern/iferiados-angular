@@ -1,0 +1,30 @@
+<div
+  class="holiday-card"
+  [ngClass]="{ 'holiday-card': true, 'holiday-card-selected': showInfo }"
+>
+  <div class="cell cell-calendar">
+    <app-calendar
+      [month]="holiday.month()"
+      [day]="holiday.dayOfMonth()"
+    ></app-calendar>
+  </div>
+  <div class="cell cell-info">
+    <div class="title">
+      {{ holiday.name }}
+    </div>
+    <div class="info type">
+      {{ holiday.type.toUpperCase() }}
+    </div>
+    <div class="info fullDate">{{ holiday.fullDate() }}</div>
+    <div class="info countdown">
+      {{ holiday.countdown() }}
+    </div>
+  </div>
+  <div (click)="toggleInfo()" class="cell cell-open">
+    <fa-icon [icon]="showInfoIcon()"></fa-icon>
+  </div>
+
+  <div *ngIf="showInfo" [@infoAnimation] class="info details">
+    {{ holiday.info }}
+  </div>
+</div>

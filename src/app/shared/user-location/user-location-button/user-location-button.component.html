@@ -1,0 +1,21 @@
+<div *ngIf="userLocation$ | async as userLocation" [routerLink]="['estados']">
+  <div
+    *ngIf="userLocation.city; else selectLocation"
+    class="current-location-container"
+  >
+    <fa-icon [icon]="placeIcon"></fa-icon>
+    <span>{{ userLocation.city.name }}</span>
+    <span>{{ userLocation.stateCode }}</span>
+  </div>
+
+  <ng-template #selectLocation>
+    <button
+      class="user-location-button"
+      type="button"
+      [routerLink]="['estados']"
+    >
+      <fa-icon [icon]="placeIcon"></fa-icon>
+      <p>Selecione seu local</p>
+    </button>
+  </ng-template>
+</div>

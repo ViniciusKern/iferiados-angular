@@ -1,0 +1,12 @@
+<nav>
+  <ul class="holiday-type-ul">
+    <li
+      *ngFor="let type of types"
+      [ngClass]="{ 'li-holiday-type': true, selected: type == selected }"
+    >
+      <div class="holiday-type-button" (click)="selectType(type)">
+        {{ type.name.toUpperCase() }}
+      </div>
+    </li>
+  </ul>
+</nav>

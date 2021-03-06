@@ -1,0 +1,38 @@
+@import 'src/assets/styles/variables.scss';
+
+h3 {
+  margin: 1rem;
+}
+
+.cities-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  max-width: $app-max-width;
+  margin: 0 auto;
+}
+
+.cities-container ul {
+  width: 100%;
+
+  list-style: none;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.cities-container li {
+  border-top: 1px solid rgb(228, 228, 228);
+  padding: 0.8rem;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(220, 239, 255);
+  }
+}
+
+.search-bar {
+  width: 100%;
+}

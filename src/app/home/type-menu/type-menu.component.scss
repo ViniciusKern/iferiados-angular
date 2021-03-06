@@ -1,0 +1,41 @@
+@import 'src/assets/styles/variables.scss';
+@import 'src/assets/styles/mixins.scss';
+
+#holiday-type-nav,
+.holiday-type-ul {
+  width: 100%;
+  max-width: $app-max-width;
+  margin: 0 auto;
+}
+.li-holiday-type {
+  display: inline-block;
+  background-color: white;
+  border-radius: 10px;
+  width: 22%;
+  margin: 1rem 1% 1rem 1%;
+  cursor: pointer;
+  border: 1px solid #ebebeb;
+
+  &:hover {
+    filter: brightness(0.95);
+  }
+}
+
+.holiday-type-button {
+  width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  font-weight: bold;
+  font-size: 0.8rem;
+
+  @include mobile {
+    padding: 0.4rem;
+    font-size: 0.7rem;
+  }
+}
+
+.selected {
+  background-color: $primary-color;
+  color: white;
+  cursor: default;
+}

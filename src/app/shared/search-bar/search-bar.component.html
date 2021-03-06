@@ -1,0 +1,10 @@
+<div class="search-bar-container">
+  <input
+    #search
+    type="search"
+    [placeholder]="placeholder"
+    (input)="debounce.next(search.value)"
+    [value]="value"
+    autofocus
+  />
+</div>

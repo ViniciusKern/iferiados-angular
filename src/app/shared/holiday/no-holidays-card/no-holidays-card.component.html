@@ -1,0 +1,9 @@
+<div class="no-holidays-container">
+  <fa-icon [icon]="exclamationIcon" size="4x"></fa-icon>
+  <p *ngIf="userLocation.city; else noHolidays">
+    Sem feriados {{ holidayTypeName.toLowerCase() }}
+  </p>
+  <ng-template #noHolidays>
+    <p>Selecione seu local</p>
+  </ng-template>
+</div>

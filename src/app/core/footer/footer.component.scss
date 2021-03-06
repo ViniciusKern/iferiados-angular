@@ -1,0 +1,40 @@
+@import 'src/assets/styles/variables.scss';
+
+.app-footer {
+  height: $footer-height;
+  background-color: rgb(165, 165, 165);
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.app-footer a {
+  padding: 0.2rem 0.6rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: rgb(230, 230, 230);
+  color: rgb(66, 66, 66);
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: background-color 0.3s;
+
+  &:hover {
+    color: black;
+    background-color: white;
+  }
+}
+
+.app-footer a img {
+  margin-right: 0.5rem;
+}
+
+.app-footer p {
+  font-size: 0.6rem;
+  padding-top: 0.6rem;
+}

@@ -1,0 +1,21 @@
+<h3>Selecione sua cidade</h3>
+
+<div class="cities-container" *ngIf="cities$ | async as cities; else loading">
+  <app-search-bar
+    class="search-bar"
+    [placeholder]="'Digite o nome da cidade'"
+    (onTyping)="filter = $event"
+  ></app-search-bar>
+
+  <ul>
+    <li *ngFor="let city of cities | filterCityByName: filter">
+      <div (click)="setUserLocation(city)">{{ city.name }}</div>
+    </li>
+  </ul>
+</div>
+
+<ng-template #loading>
+  <app-loading-indicator
+    [text]="'Carregando lista de cidades...'"
+  ></app-loading-indicator>
+</ng-template>

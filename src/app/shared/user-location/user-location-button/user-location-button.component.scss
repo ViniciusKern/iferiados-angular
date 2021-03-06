@@ -1,0 +1,64 @@
+@import 'src/assets/styles/mixins.scss';
+
+.user-location-button {
+  width: 100%;
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.8rem;
+  border: 0;
+  border-radius: 15px;
+
+  background-color: rgb(23, 58, 161);
+  color: white;
+  font-size: 1rem;
+
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  &:hover {
+    filter: brightness(1.2);
+  }
+}
+
+.user-location-button p {
+  margin-left: 0.8rem;
+}
+
+.current-location-container {
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(20, 70, 177);
+  border-radius: 10px;
+
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+
+  @include mobile {
+    font-size: 0.8rem;
+  }
+
+  &:hover {
+    filter: brightness(1.2);
+  }
+}
+
+.current-location-container span {
+  padding: 0.5rem;
+
+  &:last-child {
+    height: 100%;
+    background-color: rgb(17, 55, 138);
+    border-radius: 0 10px 10px 0;
+  }
+}
+
+.current-location-container fa-icon {
+  padding-left: 0.5rem;
+}

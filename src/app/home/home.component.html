@@ -1,0 +1,25 @@
+<app-type-menu
+  [types]="types"
+  [(selected)]="selected"
+  (selectedChange)="filterHolidays()"
+></app-type-menu>
+
+<div *ngIf="holidays; else loading">
+  <div class="holidays-container" *ngIf="filteredHolidays.length; else empty">
+    <div *ngFor="let h of filteredHolidays">
+      <app-holiday-card [holiday]="h"></app-holiday-card>
+    </div>
+  </div>
+
+  <ng-template #empty>
+    <app-no-holidays-card
+      [holidayTypeName]="selected.name"
+    ></app-no-holidays-card>
+  </ng-template>
+</div>
+
+<ng-template #loading>
+  <app-loading-indicator
+    [text]="'Carregando feriados...'"
+  ></app-loading-indicator>
+</ng-template>

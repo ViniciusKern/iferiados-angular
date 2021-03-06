@@ -1,0 +1,15 @@
+<h3>Selecione seu estado</h3>
+
+<div class="states-container" *ngIf="states$ | async as states; else loading">
+  <ul>
+    <li *ngFor="let state of states">
+      <div [routerLink]="['/', state.code, 'cidades']">{{ state.name }}</div>
+    </li>
+  </ul>
+</div>
+
+<ng-template #loading>
+  <app-loading-indicator
+    [text]="'Carregando lista de estados...'"
+  ></app-loading-indicator>
+</ng-template>

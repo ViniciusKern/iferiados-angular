@@ -1,0 +1,76 @@
+@import 'src/assets/styles/variables.scss';
+@import 'src/assets/styles/mixins.scss';
+
+.holiday-card {
+  margin: 1rem auto;
+  background-color: white;
+  border-radius: 10px;
+  max-width: 650px;
+  width: 90%;
+  padding: 0.8rem;
+  display: block;
+  box-shadow: 0 0 0.2rem 0 #ebebeb;
+  box-sizing: border-box;
+  transition: border-top 0.2s;
+
+  @include mobile {
+    padding: 0.4rem;
+  }
+}
+
+.holiday-card-selected {
+  border-top: solid 3px $primary-color;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.5em;
+
+  @include mobile {
+    font-size: 1rem;
+  }
+}
+
+.info {
+  display: block;
+  margin-top: 0.4rem;
+
+  @include mobile {
+    font-size: 0.8rem;
+  }
+}
+
+.details {
+  padding: 1rem;
+}
+
+.type,
+.countdown {
+  font-size: 0.8rem;
+}
+
+.fullDate {
+  @include mobile {
+    font-size: 0.8rem;
+  }
+}
+
+.cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.cell-calendar {
+  width: 20%;
+}
+
+.cell-info {
+  width: 70%;
+  text-align: left;
+  padding-left: 0.2rem;
+}
+
+.cell-open {
+  width: 10%;
+  cursor: pointer;
+}

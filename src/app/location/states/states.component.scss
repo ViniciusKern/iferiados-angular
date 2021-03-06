@@ -1,0 +1,30 @@
+@import 'src/assets/styles/variables.scss';
+
+h3 {
+  margin: 1rem;
+}
+
+.states-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.states-container ul {
+  width: 100%;
+  max-width: $app-max-width;
+  list-style: none;
+  background-color: white;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+.states-container li {
+  border-top: 1px solid rgb(228, 228, 228);
+  padding: 1rem;
+
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(220, 239, 255);
+  }
+}

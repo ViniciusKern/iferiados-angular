@@ -1,0 +1,6 @@
+@import 'src/assets/styles/variables.scss';
+
+main {
+  padding-bottom: 1.5rem;
+  min-height: calc(97vh - #{$footer-height} - #{$header-height});
+}

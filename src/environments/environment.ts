@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  api: 'https://vkapps.com.br/api/iferiados',
+  holidaysEndpoint: 'holidays.php',
+  statesEndpoint: 'states.php',
+  citiesEndpoint: 'cities.php',
 };
 
 /*
